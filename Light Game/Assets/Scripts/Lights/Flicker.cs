@@ -17,9 +17,13 @@ public class Flicker : MonoBehaviour
         if (flickerEnabled) {
             if (!isFlicker)
             {
-
                 StartCoroutine(LightFlicker());
             }
+        }
+        else
+        {
+            //could be a better way to do this 
+            this.gameObject.GetComponent<Light>().enabled = false;
         }
     }
 
@@ -36,9 +40,4 @@ public class Flicker : MonoBehaviour
 
     }
 
-    void FlickerPower()
-    {
-        this.gameObject.GetComponent<Light>().enabled = false;
-        flickerEnabled = !flickerEnabled;
-    }
 }

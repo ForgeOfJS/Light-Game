@@ -5,14 +5,8 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public GameObject referenceObject;
-    public GameObject destination;
     //public float objectSpeed;
-    private Vector3 prevPosition;
-    
-    void Start()
-    {
-        prevPosition = referenceObject.transform.position;
-    }
+
 
     public void OnButtonPress()
     {
@@ -31,18 +25,5 @@ public class Button : MonoBehaviour
             }
         }
         //otherwise if it has a collider
-        else if (referenceObject.GetComponent<Collider>())
-        {
-            //swich position between designated and original
-            if (referenceObject.transform.position != prevPosition)
-            {
-                referenceObject.transform.position = prevPosition;
-            }
-            else
-            {
-                referenceObject.transform.position = destination.transform.position;
-            }
-            
-        }
     }
 }

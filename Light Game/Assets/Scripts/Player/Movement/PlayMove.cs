@@ -107,6 +107,6 @@ public class PlayMove : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-        //Debug.Log((int)curStam + ", " + maxStam + "| " + speed);
+        Debug.Log((int)curStam + ", " + maxStam + "| " + speed);
     }
 }

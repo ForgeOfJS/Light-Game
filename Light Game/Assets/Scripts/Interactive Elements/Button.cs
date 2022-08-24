@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public GameObject referenceObject;
-    //public float objectSpeed;
+    
 
 
     public void OnButtonPress()
@@ -25,5 +25,9 @@ public class Button : MonoBehaviour
             }
         }
         //otherwise if it has a collider
+        else if (referenceObject.GetComponent<Collider>()) 
+        {
+            //play animation of door opening
+        }
     }
 }
